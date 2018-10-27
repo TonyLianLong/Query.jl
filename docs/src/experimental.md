@@ -48,6 +48,13 @@ The remaining arguments of each query demand are command specific.
 The following discussion will present each command in the version that
 accepts a source as the first argument.
 
+### The `@select` command
+
+The `@select` command has the form `select(args...)`.
+`args` can be columns in the source column (`:columnName`), `startswith("columnNamePrefix")`, 
+`endswith("columnNameSuffix")`, `occursin("wordsInColumnName")`, 
+`rangeat(:startingColumnName, :endingColumnName)`, or `-:columnNameToBeRemovedFromSource`.
+
 ### The `@map` command
 
 The `@map` command has the form `@map(source, element_selector)`.
